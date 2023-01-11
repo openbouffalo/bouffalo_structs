@@ -1,0 +1,52 @@
+meta:
+  name: bl808_clock_cfg
+  description: ""
+  packed: true
+  aligned: 4
+
+fields:
+  - id: magic_code
+    type: uint8_t
+    size: 4
+  - id: xtal_type
+    type: uint8_t
+  - id: mcu_clk
+    type: uint8_t
+  - id: mcu_clk_div
+    type: uint8_t
+  - id: mcu_bclk_div
+    type: uint8_t
+  - id: mcu_pbclk_div
+    type: uint8_t
+  - id: lp_div
+    type: uint8_t
+  - id: dsp_clk
+    type: uint8_t
+  - id: dsp_clk_div
+    type: uint8_t
+  - id: dsp_bclk_div
+    type: uint8_t
+  - id: dsp_pbclk
+    type: uint8_t
+  - id: dsp_pbclk_div
+    type: uint8_t
+  - id: emi_clk
+    type: uint8_t
+  - id: emi_clk_div
+    type: uint8_t
+  - id: flash_clk_type
+    type: uint8_t
+  - id: flash_clk_div
+    type: uint8_t
+  - id: wifipll_pu
+    type: uint8_t
+  - id: aupll_pu
+    type: uint8_t
+  - id: cpupll_pu
+    type: uint8_t
+  - id: mipipll_pu
+    type: uint8_t
+  - id: uhspll_pu
+    type: uint8_t
+  - id: crc32
+    type: uint32_t

@@ -1,0 +1,51 @@
+meta:
+  name: bl808_boot_header
+  description: ""
+  packed: true
+  aligned: 4
+  imports:
+    - bl808_basic_cfg
+    - bl808_flash_cfg
+    - bl808_clock_cfg
+    - bl808_cpu_cfg
+    - bl808_patch_cfg
+
+fields:
+  - id: magic_code
+    type: uint32_t
+  - id: revison
+    type: uint32_t
+  - id: flash_cfg
+    type: bl808_flash_cfg
+  - id: clk_cfg
+    type: bl808_clock_cfg
+  - id: basic_cfg
+    type: bl808_basic_cfg
+  - id: cpu_cfg
+    type: bl808_cpu_cfg
+    size: 3
+  - id: boot2_pt_table_0
+    type: uint32_t
+    description: "address of partition table 0"
+  - id: boot2_pt_table_1
+    type: uint32_t
+    description: "address of partition table 1"
+  - id: flash_cfg_table_addr
+    type: uint32_t
+    description: "address of flashcfg table list"
+  - id: flash_cfg_table_len
+    type: uint32_t
+    description: "flashcfg table list len"
+  - id: patch_on_read
+    type: bl808_patch_cfg
+    size: 4
+    description: "do patch when read flash"
+  - id: patch_on_jump
+    type: bl808_patch_cfg
+    size: 4
+    description: "do patch when jump"
+  - id: rsvd
+    type: uint32_t
+    size: 5
+  - id: crc32
+    type: uint32_t

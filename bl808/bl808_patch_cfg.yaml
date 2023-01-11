@@ -1,0 +1,11 @@
+meta:
+  name: bl808_patch_cfg
+  description: ""
+  packed: true
+  aligned: 4
+
+fields:
+  - id: addr
+    type: uint32_t
+  - id: value
+    type: uint32_t

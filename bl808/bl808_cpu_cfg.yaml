@@ -1,0 +1,50 @@
+meta:
+  name: bl808_cpu_cfg
+  description: ""
+  packed: true
+  aligned: 4
+
+fields:
+  - id: config_enable
+    type: uint8_t
+    description: "coinfig this cpu"
+  - id: halt_cpu
+    type: uint8_t
+    description: "halt this cpu"
+  - id: cache_enable
+    type: uint8_t
+    bitsize: 1
+    description: "cache setting"
+  - id: cache_wa
+    type: uint8_t
+    bitsize: 1
+    description: "cache setting"
+  - id: cache_wb
+    type: uint8_t
+    bitsize: 1
+    description: "cache setting"
+  - id: cache_wt
+    type: uint8_t
+    bitsize: 1
+    description: "cache setting"
+  - id: cache_way_dis
+    type: uint8_t
+    bitsize: 4
+    description: "cache setting"
+  - id: rsvd
+    type: uint8_t
+  - id: cache_range_h
+    type: uint32_t
+    description: "cache range high"
+  - id: cache_range_l
+    type: uint32_t
+    description: "cache range low"
+  - id: image_address_offset
+    type: uint32_t
+    description: "image address on flash  /*image_address_offset*/"
+  - id: boot_entry
+    type: uint32_t
+    description: "entry point of the m0 image"
+  - id: msp_val
+    type: uint32_t
+    description: "msp value"
