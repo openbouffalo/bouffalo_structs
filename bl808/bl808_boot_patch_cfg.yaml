@@ -2,6 +2,7 @@ meta:
   name: bl808_boot_patch_cfg
   description: ""
   packed: true
+  final_size: 8
   aligned: 4
 
 fields:

@@ -2,6 +2,7 @@ meta:
   name: bl808_boot_cpu_cfg
   description: ""
   packed: true
+  final_size: 24
   aligned: 4
 
 fields:

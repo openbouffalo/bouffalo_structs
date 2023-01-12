@@ -3,6 +3,7 @@ meta:
   description: ""
   packed: true
   aligned: 4
+  final_size: 28
   imports:
     - bl808_clock_cfg
 

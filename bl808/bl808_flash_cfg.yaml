@@ -1,6 +1,7 @@
 meta:
   name: bl808_flash_cfg
   description: "Serial flash configuration structure type definition"
+  final_size: 84
   packed: true
 
 fields:

@@ -3,6 +3,7 @@ meta:
   description: ""
   packed: true
   aligned: 4
+  final_size: 92
   imports:
     - bl808_flash_cfg
 

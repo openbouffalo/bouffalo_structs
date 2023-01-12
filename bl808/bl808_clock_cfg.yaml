@@ -2,6 +2,7 @@ meta:
   name: bl808_clock_cfg
   description: ""
   packed: true
+  final_size: 20
   aligned: 4
 
 fields:
