@@ -1,0 +1,16 @@
+meta:
+  name: bl808_boot_clock_cfg
+  description: ""
+  packed: true
+  aligned: 4
+  imports:
+    - bl808_clock_cfg
+
+fields:
+  - id: magic_code
+    type: uint8_t
+    size: 4
+  - id: clock_cfg
+    type: bl808_clock_cfg
+  - id: crc32
+    type: uint32_t

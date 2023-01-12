@@ -1,5 +1,5 @@
 meta:
-  name: bl808_basic_cfg
+  name: bl808_boot_basic_cfg
   description: ""
   packed: true
   aligned: 4

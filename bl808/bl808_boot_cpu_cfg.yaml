@@ -1,5 +1,5 @@
 meta:
-  name: bl808_cpu_cfg
+  name: bl808_boot_cpu_cfg
   description: ""
   packed: true
   aligned: 4

@@ -3,12 +3,13 @@ meta:
   description: ""
   packed: true
   aligned: 4
+  final_size: 352
   imports:
-    - bl808_basic_cfg
-    - bl808_flash_cfg
-    - bl808_clock_cfg
-    - bl808_cpu_cfg
-    - bl808_patch_cfg
+    - bl808_boot_basic_cfg
+    - bl808_boot_flash_cfg
+    - bl808_boot_clock_cfg
+    - bl808_boot_cpu_cfg
+    - bl808_boot_patch_cfg
 
 fields:
   - id: magic_code
@@ -16,13 +17,13 @@ fields:
   - id: revison
     type: uint32_t
   - id: flash_cfg
-    type: bl808_flash_cfg
+    type: bl808_boot_flash_cfg
   - id: clk_cfg
-    type: bl808_clock_cfg
+    type: bl808_boot_clock_cfg
   - id: basic_cfg
-    type: bl808_basic_cfg
+    type: bl808_boot_basic_cfg
   - id: cpu_cfg
-    type: bl808_cpu_cfg
+    type: bl808_boot_cpu_cfg
     size: 3
   - id: boot2_pt_table_0
     type: uint32_t
@@ -37,11 +38,11 @@ fields:
     type: uint32_t
     description: "flashcfg table list len"
   - id: patch_on_read
-    type: bl808_patch_cfg
+    type: bl808_boot_patch_cfg
     size: 4
     description: "do patch when read flash"
   - id: patch_on_jump
-    type: bl808_patch_cfg
+    type: bl808_boot_patch_cfg
     size: 4
     description: "do patch when jump"
   - id: rsvd

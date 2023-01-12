@@ -5,9 +5,6 @@ meta:
   aligned: 4
 
 fields:
-  - id: magic_code
-    type: uint8_t
-    size: 4
   - id: xtal_type
     type: uint8_t
   - id: mcu_clk
@@ -48,5 +45,3 @@ fields:
     type: uint8_t
   - id: uhspll_pu
     type: uint8_t
-  - id: crc32
-    type: uint32_t
