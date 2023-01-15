@@ -1,0 +1,225 @@
+meta:
+  name: bl61x_flash_cfg
+  description: "Serial flash configuration structure type definition"
+  final_size: 84
+  packed: true
+
+fields:
+  - id: io_mode
+    type: uint8_t
+    description: "Serail flash interface mode,bit0-3:IF mode,bit4:unwrap,bit5:32-bits addr mode support"
+  - id: c_read_support
+    type: uint8_t
+    description: "Support continuous read mode,bit0:continuous read mode support,bit1:read mode cfg"
+  - id: clk_delay
+    type: uint8_t
+    description: "SPI clock delay,bit0-3:delay,bit4-6:pad delay"
+  - id: clk_invert
+    type: uint8_t
+    description: "SPI clock phase invert,bit0:clck invert,bit1:rx invert,bit2-4:pad delay,bit5-7:pad delay"
+  - id: reset_en_cmd
+    type: uint8_t
+    description: "Flash enable reset command"
+  - id: reset_cmd
+    type: uint8_t
+    description: "Flash reset command"
+  - id: reset_cread_cmd
+    type: uint8_t
+    description: "Flash reset continuous read command"
+  - id: reset_cread_cmd_size
+    type: uint8_t
+    description: "Flash reset continuous read command size"
+  - id: jedec_id_cmd
+    type: uint8_t
+    description: "JEDEC ID command"
+  - id: jedec_id_cmd_dmy_clk
+    type: uint8_t
+    description: "JEDEC ID command dummy clock"
+  - id: enter32_bits_addr_cmd
+    type: uint8_t
+    description: "Enter 32-bits addr command"
+  - id: exit32_bits_addr_cmd
+    type: uint8_t
+    description: "Exit 32-bits addr command"
+  - id: sector_size
+    type: uint8_t
+    description: "*1024bytes"
+  - id: mid
+    type: uint8_t
+    description: "Manufacturer ID"
+  - id: page_size
+    type: uint16_t
+    description: "Page size"
+  - id: chip_erase_cmd
+    type: uint8_t
+    description: "Chip erase cmd"
+  - id: sector_erase_cmd
+    type: uint8_t
+    description: "Sector erase command"
+  - id: blk32_erase_cmd
+    type: uint8_t
+    description: "Block 32K erase command,some Micron not support"
+  - id: blk64_erase_cmd
+    type: uint8_t
+    description: "Block 64K erase command"
+  - id: write_enable_cmd
+    type: uint8_t
+    description: "Need before every erase or program"
+  - id: page_program_cmd
+    type: uint8_t
+    description: "Page program cmd"
+  - id: qpage_program_cmd
+    type: uint8_t
+    description: "QIO page program cmd"
+  - id: qpp_addr_mode
+    type: uint8_t
+    description: "QIO page program address mode"
+  - id: fast_read_cmd
+    type: uint8_t
+    description: "Fast read command"
+  - id: fr_dmy_clk
+    type: uint8_t
+    description: "Fast read command dummy clock"
+  - id: qpi_fast_read_cmd
+    type: uint8_t
+    description: "QPI fast read command"
+  - id: qpi_fr_dmy_clk
+    type: uint8_t
+    description: "QPI fast read command dummy clock"
+  - id: fast_read_do_cmd
+    type: uint8_t
+    description: "Fast read dual output command"
+  - id: fr_do_dmy_clk
+    type: uint8_t
+    description: "Fast read dual output command dummy clock"
+  - id: fast_read_dio_cmd
+    type: uint8_t
+    description: "Fast read dual io comamnd"
+  - id: fr_dio_dmy_clk
+    type: uint8_t
+    description: "Fast read dual io command dummy clock"
+  - id: fast_read_qo_cmd
+    type: uint8_t
+    description: "Fast read quad output comamnd"
+  - id: fr_qo_dmy_clk
+    type: uint8_t
+    description: "Fast read quad output comamnd dummy clock"
+  - id: fast_read_qio_cmd
+    type: uint8_t
+    description: "Fast read quad io comamnd"
+  - id: fr_qio_dmy_clk
+    type: uint8_t
+    description: "Fast read quad io comamnd dummy clock"
+  - id: qpi_fast_read_qio_cmd
+    type: uint8_t
+    description: "QPI fast read quad io comamnd"
+  - id: qpi_fr_qio_dmy_clk
+    type: uint8_t
+    description: "QPI fast read QIO dummy clock"
+  - id: qpi_page_program_cmd
+    type: uint8_t
+    description: "QPI program command"
+  - id: write_vreg_enable_cmd
+    type: uint8_t
+    description: "Enable write reg"
+  - id: wr_enable_index
+    type: uint8_t
+    description: "Write enable register index"
+  - id: qe_index
+    type: uint8_t
+    description: "Quad mode enable register index"
+  - id: busy_index
+    type: uint8_t
+    description: "Busy status register index"
+  - id: wr_enable_bit
+    type: uint8_t
+    description: "Write enable bit pos"
+  - id: qe_bit
+    type: uint8_t
+    description: "Quad enable bit pos"
+  - id: busy_bit
+    type: uint8_t
+    description: "Busy status bit pos"
+  - id: wr_enable_write_reg_len
+    type: uint8_t
+    description: "Register length of write enable"
+  - id: wr_enable_read_reg_len
+    type: uint8_t
+    description: "Register length of write enable status"
+  - id: qe_write_reg_len
+    type: uint8_t
+    description: "Register length of contain quad enable"
+  - id: qe_read_reg_len
+    type: uint8_t
+    description: "Register length of contain quad enable status"
+  - id: release_power_down
+    type: uint8_t
+    description: "Release power down command"
+  - id: busy_read_reg_len
+    type: uint8_t
+    description: "Register length of contain busy status"
+  - id: read_reg_cmd
+    type: uint8_t
+    size: 4
+    description: "Read register command buffer"
+  - id: write_reg_cmd
+    type: uint8_t
+    size: 4
+    description: "Write register command buffer"
+  - id: enter_qpi
+    type: uint8_t
+    description: "Enter qpi command"
+  - id: exit_qpi
+    type: uint8_t
+    description: "Exit qpi command"
+  - id: c_read_mode
+    type: uint8_t
+    description: "Config data for continuous read mode"
+  - id: c_r_exit
+    type: uint8_t
+    description: "Config data for exit continuous read mode"
+  - id: burst_wrap_cmd
+    type: uint8_t
+    description: "Enable burst wrap command"
+  - id: burst_wrap_cmd_dmy_clk
+    type: uint8_t
+    description: "Enable burst wrap command dummy clock"
+  - id: burst_wrap_data_mode
+    type: uint8_t
+    description: "Data and address mode for this command"
+  - id: burst_wrap_data
+    type: uint8_t
+    description: "Data to enable burst wrap"
+  - id: de_burst_wrap_cmd
+    type: uint8_t
+    description: "Disable burst wrap command"
+  - id: de_burst_wrap_cmd_dmy_clk
+    type: uint8_t
+    description: "Disable burst wrap command dummy clock"
+  - id: de_burst_wrap_data_mode
+    type: uint8_t
+    description: "Data and address mode for this command"
+  - id: de_burst_wrap_data
+    type: uint8_t
+    description: "Data to disable burst wrap"
+  - id: time_esector
+    type: uint16_t
+    description: "4K erase time"
+  - id: time_e32k
+    type: uint16_t
+    description: "32K erase time"
+  - id: time_e64k
+    type: uint16_t
+    description: "64K erase time"
+  - id: time_page_pgm
+    type: uint16_t
+    description: "Page program time"
+  - id: time_ce
+    type: uint16_t
+    description: "Chip erase time in ms"
+  - id: pd_delay
+    type: uint8_t
+    description: "Release power down command delay time for wake up"
+  - id: qe_data
+    type: uint8_t
+    description: "QE set data"

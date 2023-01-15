@@ -1,0 +1,51 @@
+meta:
+  name: bl61x_boot_header
+  description: ""
+  packed: true
+  aligned: 4
+  final_size: 256
+  imports:
+    - bl61x_boot_basic_cfg
+    - bl61x_boot_flash_cfg
+    - bl61x_boot_clock_cfg
+    - bl61x_boot_cpu_cfg
+    - bl61x_boot_patch_cfg
+
+fields:
+  - id: magiccode
+    type: uint32_t
+  - id: rivison
+    type: uint32_t
+  - id: flash_cfg
+    type: bl61x_boot_flash_cfg
+  - id: clk_cfg
+    type: bl61x_boot_clock_cfg
+  - id: basic_cfg
+    type: bl61x_boot_basic_cfg
+  - id: cpu_cfg
+    type: bl61x_boot_cpu_cfg
+    size: 1
+  - id: boot2_pt_table_0
+    type: uint32_t
+    description: "address of partition table 0"
+  - id: boot2_pt_table_1
+    type: uint32_t
+    description: "address of partition table 1"
+  - id: flash_cfg_table_addr
+    type: uint32_t
+    description: "address of flashcfg table list"
+  - id: flash_cfg_table_len
+    type: uint32_t
+    description: "flashcfg table list len"
+  - id: patch_on_read
+    type: bl61x_boot_patch_cfg
+    size: 3
+    description: "do patch when read flash"
+  - id: patch_on_jump
+    type: bl61x_boot_patch_cfg
+    size: 3
+    description: "do patch when jump"
+  - id: rsvd
+    type: uint32_t
+  - id: crc32
+    type: uint32_t

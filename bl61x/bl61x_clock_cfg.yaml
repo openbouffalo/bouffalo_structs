@@ -1,0 +1,32 @@
+meta:
+  name: bl61x_clock_cfg
+  description: ""
+  packed: true
+  final_size: 12
+  aligned: 4
+
+fields:
+  - id: xtal_type
+    type: uint8_t
+  - id: mcu_clk
+    type: uint8_t
+  - id: mcu_clk_div
+    type: uint8_t
+  - id: mcu_bclk_div
+    type: uint8_t
+  - id: mcu_pbclk_div
+    type: uint8_t
+  - id: emi_clk
+    type: uint8_t
+  - id: emi_clk_div
+    type: uint8_t
+  - id: flash_clk_type
+    type: uint8_t
+  - id: flash_clk_div
+    type: uint8_t
+  - id: wifipll_pu
+    type: uint8_t
+  - id: aupll_pu
+    type: uint8_t
+  - id: rsvd0
+    type: uint8_t

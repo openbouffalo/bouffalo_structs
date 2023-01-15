@@ -1,0 +1,18 @@
+meta:
+  name: bl61x_boot_flash_cfg
+  description: ""
+  packed: true
+  aligned: 4
+  final_size: 92
+  imports:
+    - bl61x_flash_cfg
+
+fields:
+  - id: magic_code
+    type: uint8_t
+    size: 4
+    description: "FCFG"
+  - id: flash_cfg
+    type: bl61x_flash_cfg
+  - id: crc32
+    type: uint32_t

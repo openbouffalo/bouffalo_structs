@@ -1,0 +1,101 @@
+meta:
+  name: bl61x_boot_basic_cfg
+  description: ""
+  packed: true
+  final_size: 48
+  aligned: 4
+
+fields:
+  - id: sign_type
+    type: uint32_t
+    bitsize: 2
+    description: "[1: 0]   for sign"
+  - id: encrypt_type
+    type: uint32_t
+    bitsize: 2
+    description: "[3: 2]   for encrypt"
+  - id: key_sel
+    type: uint32_t
+    bitsize: 2
+    description: "[5: 4]   key slot"
+  - id: xts_mode
+    type: uint32_t
+    bitsize: 1
+    description: "[6]      for xts mode"
+  - id: aes_region_lock
+    type: uint32_t
+    bitsize: 1
+    description: "[7]      rsvd"
+  - id: no_segment
+    type: uint32_t
+    bitsize: 1
+    description: "[8]      no segment info"
+  - id: boot2_enable
+    type: uint32_t
+    bitsize: 1
+    description: "[9]      boot2 enable"
+  - id: boot2_rollback
+    type: uint32_t
+    bitsize: 1
+    description: "[10]     boot2 rollback"
+  - id: cpu_master_id
+    type: uint32_t
+    bitsize: 4
+    description: "[14: 11] master id"
+  - id: notload_in_bootrom
+    type: uint32_t
+    bitsize: 1
+    description: "[15]     notload in bootrom"
+  - id: crc_ignore
+    type: uint32_t
+    bitsize: 1
+    description: "[16]     ignore crc"
+  - id: hash_ignore
+    type: uint32_t
+    bitsize: 1
+    description: "[17]     hash ignore"
+  - id: power_on_mm
+    type: uint32_t
+    bitsize: 1
+    description: "[18]     power on mm"
+  - id: em_sel
+    type: uint32_t
+    bitsize: 3
+    description: "[21: 19] em_sel"
+  - id: cmds_en
+    type: uint32_t
+    bitsize: 1
+    description: "[22]     command spliter enable"
+  - id: cmds_wrap_mode
+    type: uint32_t
+    bitsize: 2
+    description: "[24: 23] cmds wrap mode"
+  - id: cmds_wrap_len
+    type: uint32_t
+    bitsize: 4
+    description: "[28: 25] cmds wrap len"
+  - id: icache_invalid
+    type: uint32_t
+    bitsize: 1
+    description: "[29] icache invalid"
+  - id: dcache_invalid
+    type: uint32_t
+    bitsize: 1
+    description: "[30] dcache invalid"
+  - id: fpga_halt_release
+    type: uint32_t
+    bitsize: 1
+    description: "[31] FPGA halt release function"
+  - id: group_image_offset
+    type: uint32_t
+    description: "flash controller offset"
+  - id: aes_region_len
+    type: uint32_t
+    description: "aes region length"
+  - id: img_len_cnt
+    type: uint32_t
+    description: "image length or segment count"
+  - id: hash
+    type: uint32_t
+    size: 8
+    description: "hash of the image"

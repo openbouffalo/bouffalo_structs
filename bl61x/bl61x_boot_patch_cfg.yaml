@@ -1,0 +1,12 @@
+meta:
+  name: bl61x_boot_patch_cfg
+  description: ""
+  packed: true
+  final_size: 8
+  aligned: 4
+
+fields:
+  - id: addr
+    type: uint32_t
+  - id: value
+    type: uint32_t

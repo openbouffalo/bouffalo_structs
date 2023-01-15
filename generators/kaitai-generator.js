@@ -62,6 +62,15 @@ async function main() {
   await structureToKaitai('./bl808/bl808_boot_basic_cfg.yaml', './kaitai/bl808/bl808_boot_basic_cfg.ksy');
   await structureToKaitai('./bl808/bl808_boot_patch_cfg.yaml', './kaitai/bl808/bl808_boot_patch_cfg.ksy');
   await structureToKaitai('./bl808/bl808_boot_header.yaml', './kaitai/bl808/bl808_boot_header.ksy');
+
+  await structureToKaitai('./bl61x/bl61x_clock_cfg.yaml', './kaitai/bl61x/bl61x_clock_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_flash_cfg.yaml', './kaitai/bl61x/bl61x_flash_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_clock_cfg.yaml', './kaitai/bl61x/bl61x_boot_clock_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_flash_cfg.yaml', './kaitai/bl61x/bl61x_boot_flash_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_cpu_cfg.yaml', './kaitai/bl61x/bl61x_boot_cpu_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_basic_cfg.yaml', './kaitai/bl61x/bl61x_boot_basic_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_patch_cfg.yaml', './kaitai/bl61x/bl61x_boot_patch_cfg.ksy');
+  await structureToKaitai('./bl61x/bl61x_boot_header.yaml', './kaitai/bl61x/bl61x_boot_header.ksy');
 }
 
 main();
