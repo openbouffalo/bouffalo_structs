@@ -90,13 +90,13 @@ async function main() {
   await structureToImHex('./bl808/bl808_boot_patch_cfg.yaml', './imhex/includes/bl808_boot_patch_cfg.hexpat');
   await structureToImHex('./bl808/bl808_boot_header.yaml', './imhex/includes/bl808_boot_header.hexpat');
 
-  // await structureToImHex('./bl61x/bl61x_clock_cfg.yaml', './imhex/bl61x/bl61x_clock_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_flash_cfg.yaml', './imhex/bl61x/bl61x_flash_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_clock_cfg.yaml', './imhex/bl61x/bl61x_boot_clock_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_flash_cfg.yaml', './imhex/bl61x/bl61x_boot_flash_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_cpu_cfg.yaml', './imhex/bl61x/bl61x_boot_cpu_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_basic_cfg.yaml', './imhex/bl61x/bl61x_boot_basic_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_patch_cfg.yaml', './imhex/bl61x/bl61x_boot_patch_cfg.hexpat');
-  // await structureToImHex('./bl61x/bl61x_boot_header.yaml', './imhex/bl61x/bl61x_boot_header.hexpat');
+  await structureToImHex('./bl61x/bl61x_clock_cfg.yaml', './imhex/includes/bl61x_clock_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_flash_cfg.yaml', './imhex/includes/bl61x_flash_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_clock_cfg.yaml', './imhex/includes/bl61x_boot_clock_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_flash_cfg.yaml', './imhex/includes/bl61x_boot_flash_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_cpu_cfg.yaml', './imhex/includes/bl61x_boot_cpu_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_basic_cfg.yaml', './imhex/includes/bl61x_boot_basic_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_patch_cfg.yaml', './imhex/includes/bl61x_boot_patch_cfg.hexpat');
+  await structureToImHex('./bl61x/bl61x_boot_header.yaml', './imhex/includes/bl61x_boot_header.hexpat');
 }
 main();

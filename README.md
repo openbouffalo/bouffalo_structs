@@ -9,5 +9,6 @@ some of values can be mapped to enums, and some of fields might be wrong. So imp
 Repository also contains scripts, for converting those YAMLs to another file formats. Planned generators are:
 
 - [X] Kaitai
+- [X] ImHex ([docs](docs/imhex.md))
 - [ ] C Headers
 - [ ] Rust Headers
