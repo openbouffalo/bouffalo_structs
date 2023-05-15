@@ -16,15 +16,27 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - name: Install dependencies
+        run: npm install
       - name: Generate ImHex
         run: |
-          npm install
           mkdir -p imhex/includes
           node generators/imhex-generator.js
+      - name: Generate Kaitai
+        run: |
+          mkdir -p kaitai/bl61x kaitai/bl808
+          node generators/kaitai-generator.js
       - name: Upload ImHex artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: imhex-hexpats
           path: |
             imhex
+          if-no-files-found: error
+      - name: Upload Kaitai artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: kaitai-ksy
+          path: |
+            kaitai
           if-no-files-found: error 
